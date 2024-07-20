@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function generateRandomPokemons() {
         const pokemons = [];
         while (pokemons.length < 6) {
-            const id = Math.floor(Math.random() * 898) + 1; // IDs de 1 a 898
+            const id = Math.floor(Math.random() * 898) + 1;
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
             const data = await response.json();
             if (!pokemons.includes(data.name)) {
