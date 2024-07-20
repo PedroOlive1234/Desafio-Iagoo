@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao Mundo Pokémon!</h1>
+    </header>
+    <main>
+        <section class="introduction">
+            <button id="openFormButton">Registrar Treinador Pokémon</button>
+            <button id="showTrainerListButton">Lista de Treinadores</button>
+
+
+        </section>
+        <section id="trainerFormSection" class="trainer-form-section">
+            <h2>Dados do Treinador Pokémon</h2>
+            <form id="trainerForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="height">Altura:</label>
+                <input type="text" id="height" name="height" required>
+
+                <label for="bloodType">Tipo Sanguíneo:</label>
+                <input type="text" id="bloodType" name="bloodType" required>
+
+                <label for="gender">Sexo:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="weight">Peso:</label>
+                <input type="text" id="weight" name="weight" required>
+
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="badges">Insígnias:</label>
+                <input type="text" id="badges" name="badges" required>
+
+                <label for="pokemons">Pokémons (separe com vírgulas):</label>
+                <textarea id="pokemons" name="pokemons" rows="4" required></textarea>
+
+                <label for="photo">Foto do Treinador (URL):</label>
+                <input type="text" id="photo" name="photo" placeholder="Insira a URL da foto" value="https://static.wikia.nocookie.net/pokemon/images/a/a7/Ash_Ketchum.png/revision/latest?cb=20220407155641" required>
+
+                <button type="submit">Cadastrar</button>
+                <button type="button" id="closeFormButton">Fechar</button>
+                <button type="button" id="generateRandomPokemons">Gerar Pokémon Aleatórios</button>
+            </form>
+        </section>
+        <section id="trainerListSection" class="trainer-list-section">
+            <h2>Lista de Treinadores</h2>
+            <button id="closeTrainerListButton">Fechar Lista</button>
+            <div id="trainerList" class="trainer-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mundo Pokémon. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
